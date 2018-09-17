@@ -10,6 +10,7 @@ import { TvshowDetailsComponent } from './tvshow-details/tvshow-details.componen
 import { CelebrityDetailsComponent } from './celebrity-details/celebrity-details.component';
 
 const routes: Routes = [
+  { path : "" , component : LoginComponent },
   { path : "login" , component : LoginComponent },
   { path : "register" , component : RegisterComponent },
 
