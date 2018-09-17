@@ -10,12 +10,14 @@ import { DataService } from '../data.service';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
-  movie$ : Object;
+  movies$ : Object;
   constructor(private data: DataService) { }
 
-  ngOnInit() {
-    this.data.getMovies().subscribe((data) => this.movie$ = data)
 
+  ngOnInit() {
+    
+    this.data.getMovies().subscribe((data) => this.movies$ = data)
+    console.log(this.data)
   }
 
 }

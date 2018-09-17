@@ -9,23 +9,23 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getMovies() {
-    return this.http.get('localhost:5555/api/v1/movies')
+    return this.http.get('http://localhost:5555/api/v1/movies')
   }
 
   getMovie(id){
-    return this.http.get(`localhost:5555/api/v1/movies/${id}`)
+    return this.http.get(`http://localhost:5555/api/v1/movies/${id}`)
   }
   getTvShows() {
-    return this.http.get('localhost:5555/api/v1/tvshows')
+    return this.http.get('http://localhost:5555/api/v1/tvshows')
   }
   getTvShow(id){
-    return this.http.get(`localhost:5555/api/v1/tvshows/${id}`)
+    return this.http.get(`http://localhost:5555/api/v1/tvshows/${id}`)
   }
   getCelebrities() {
-    return this.http.get('localhost:5555/api/v1/celebrities')
+    return this.http.get('http://localhost:5555/api/v1/celebrities')
   }
   getCelebrity(id){
-    return this.http.get(`localhost:5555/api/v1/celebrities/${id}`)
+    return this.http.get(`http://localhost:5555/api/v1/celebrities/${id}`)
   }
 }
 
