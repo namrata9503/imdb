@@ -8,6 +8,8 @@ import { CelebritiesComponent } from './celebrities/celebrities.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { TvshowDetailsComponent } from './tvshow-details/tvshow-details.component';
 import { CelebrityDetailsComponent } from './celebrity-details/celebrity-details.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path : "" , component : LoginComponent },
@@ -22,6 +24,9 @@ const routes: Routes = [
 
   { path : "celebrities" , component : CelebritiesComponent },
   { path : "celebrity/:id" , component : CelebrityDetailsComponent},
+
+  { path : "about" , component : AboutComponent },
+  { path : "profile" , component : ProfileComponent},
 
 ];
 

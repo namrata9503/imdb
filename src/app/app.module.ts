@@ -15,6 +15,8 @@ import { CelebritiesComponent } from './celebrities/celebrities.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { TvshowDetailsComponent } from './tvshow-details/tvshow-details.component';
 import { CelebrityDetailsComponent } from './celebrity-details/celebrity-details.component';
+import { AboutComponent } from './about/about.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CelebrityDetailsComponent } from './celebrity-details/celebrity-details
     CelebritiesComponent,
     MovieDetailsComponent,
     TvshowDetailsComponent,
-    CelebrityDetailsComponent
+    CelebrityDetailsComponent,
+    AboutComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
