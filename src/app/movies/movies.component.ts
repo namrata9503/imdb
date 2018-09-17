@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 
 import { DataService } from '../data.service';
 
+
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',

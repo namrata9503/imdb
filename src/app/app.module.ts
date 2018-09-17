@@ -12,6 +12,9 @@ import { RegisterComponent } from './register/register.component';
 import { MoviesComponent } from './movies/movies.component';
 import { TvShowsComponent } from './tv-shows/tv-shows.component';
 import { CelebritiesComponent } from './celebrities/celebrities.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { TvshowDetailsComponent } from './tvshow-details/tvshow-details.component';
+import { CelebrityDetailsComponent } from './celebrity-details/celebrity-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CelebritiesComponent } from './celebrities/celebrities.component';
     RegisterComponent,
     MoviesComponent,
     TvShowsComponent,
-    CelebritiesComponent
+    CelebritiesComponent,
+    MovieDetailsComponent,
+    TvshowDetailsComponent,
+    CelebrityDetailsComponent
   ],
   imports: [
     BrowserModule,
