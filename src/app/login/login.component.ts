@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  getU: Object = {};
+  //submitted: Boolean = true;
+  perUser$: Object = {};
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+  }
+  onLogin() {
+    console.log("Inside login()");
+    this.data.getUser(this.getU).subscribe(data => this.perUser$ = data);
+    //this.submitted = false;
   }
 
 }
