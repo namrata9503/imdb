@@ -36,6 +36,8 @@ export class DataService {
   }
   //login
   getUser(id){
+    console.log("inside getUser()", id);
+
     return this.http.get(`http://localhost:5555/api/v1/users/${id}`)
   }
   // putUpdateUser(data) {
