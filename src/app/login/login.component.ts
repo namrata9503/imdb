@@ -11,15 +11,15 @@ import { ActivatedRoute } from '@angular/router';
 export class LoginComponent implements OnInit {
   
   //submitted: Boolean = true;
-  perUser$: Object = {};
-  constructor(private data: DataService, private route : ActivatedRoute) { }
-
-  ngOnInit() {
+  perUser$: Object;
+  constructor(private data: DataService, private route : ActivatedRoute) { 
     this.route.params.subscribe((params) => this.perUser$ = params.id);
 
   }
+ ngOnInit(){}
+  
   onLogin() {
-    console.log("Inside login()",this.perUser$ );
+    console.log("Inside login()",this.data.getUser(this.perUser$) );
     this.data.getUser(this.perUser$).subscribe(data => this.perUser$ = data);
     //this.submitted = false;
   }
