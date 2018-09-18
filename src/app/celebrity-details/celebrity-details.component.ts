@@ -18,7 +18,7 @@ export class CelebrityDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.data.getCelebrity(this.c$).subscribe((data) => this.c$ = data);
-
+    console.log(this.data.getCelebrity(this.c$))
   }
 
 }

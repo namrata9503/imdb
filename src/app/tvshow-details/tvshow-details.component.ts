@@ -17,6 +17,7 @@ export class TvshowDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.data.getTvShow(this.t$).subscribe((data) => this.t$ = data);
+    console.log(this.data);
 
   }
 

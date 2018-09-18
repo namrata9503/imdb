@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
+
+  
   m$ : Object;
   constructor( private data : DataService , private route : ActivatedRoute) {
     this.route.params.subscribe((params) => this.m$ = params.id);
@@ -16,8 +18,9 @@ export class MovieDetailsComponent implements OnInit {
    }
 
   ngOnInit() {
+  
     this.data.getMovie(this.m$).subscribe((data) => this.m$ = data);
-
+    console.log(this.data);
   }
 
 }

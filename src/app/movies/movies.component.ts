@@ -16,12 +16,12 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.data.getMovies().subscribe((data) => this.movies$ = data)
-    this.data.getMovies().subscribe(function (data) {
-      this.movies$ = data
-      console.log("movies$ ", this.movies$)
-      return this.movies$;
-    })
+     this.data.getMovies().subscribe((data) => this.movies$ = data)
+    // this.data.getMovies().subscribe(function (data) {
+    //   this.movies$ = data
+    //   console.log("movies$ ", this.movies$)
+    //   return this.movies$;
+    // })
   }
 
 }

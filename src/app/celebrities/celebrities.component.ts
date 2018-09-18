@@ -12,13 +12,13 @@ export class CelebritiesComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    //  this.data.getCelebrities().subscribe((data) => this.celebrity$ = data)
+     this.data.getCelebrities().subscribe((data) => this.celebrity$ = data)
 
-    this.data.getCelebrities().subscribe(function (data) {
-      this.celebrity$ = data
-      console.log(" celebrities  ", this.celebrity$)
-      return this.celebrity$;
-    })
+    // this.data.getCelebrities().subscribe(function (data) {
+    //   this.celebrity$ = data
+    //   console.log(" celebrities  ", this.celebrity$)
+    //   return this.celebrity$;
+    // })
   }
 
 }

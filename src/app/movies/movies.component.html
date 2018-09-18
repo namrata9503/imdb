@@ -1,12 +1,13 @@
 <ul>
-  <li *ngFor="let mo of movies$">
-      <!-- <a routerLink="/details/{{user.id}}"> -->
-        {{mo.title}}
-      <!-- <ul>
-        <li>{{user.username}}</li>
-        <li><a href="http://{{user.website}}">{{user.website}}</a></li>
-        <li><a href="mailto:{{user.email}}">{{user.email}}</a></li>
-      </ul> -->
+  <li *ngFor="let mo of movies$.data">
+      <a routerLink="/movieDetails/{{mo._id}}">
+        {{mo._id}}</a>
+      <ul>
+          <li>{{mo.title}}</li>
+        <li>{{mo.status}}</li>
+        <li>{{mo.type}}</li>
+        <li>{{mo.showTime}}</li>
+      </ul>
     </li>
 </ul>
 

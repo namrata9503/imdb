@@ -12,13 +12,13 @@ export class TvShowsComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    //  this.data.getTvShows().subscribe((data) => this.tv$ = data)
+     this.data.getTvShows().subscribe((data) => this.tv$ = data)
 
-    this.data.getTvShows().subscribe(function (data) {
-      this.tv$ = data
-      console.log("tv shows$ ", this.tv$)
-      return this.tv$;
-    })
+    // this.data.getTvShows().subscribe(function (data) {
+    //   this.tv$ = data
+    //   console.log("tv shows$ ", this.tv$)
+    //   return this.tv$;
+    // })
   }
 
 }

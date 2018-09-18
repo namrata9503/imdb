@@ -1,7 +1,8 @@
+
 <ul>
-  <li *ngFor="let tv of tv$">
-      <!-- <a routerLink="/details/{{user.id}}"> -->
-        {{tv.title}}
+  <li *ngFor="let tv of tv$.data">
+      <a routerLink="/tvShowDetails/{{tv._id}}">
+        {{tv.title}}</a>
       <ul>
         <li>{{tv.status}}</li>
         
