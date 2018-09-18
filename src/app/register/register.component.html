@@ -1,22 +1,22 @@
 <div class="signup-form">
-  <form (ngSubmit)="onSubmit()" method="post">
+  <form (ngSubmit)="onSubmit()">
     <h2>Register</h2>
     <p class="hint-text">Create your account. It's free and only takes a minute.</p>
     <div class="form-group">
       <div class="row fname">
         <div class="col-xs-4">
-          <input type="text" class="form-control fname" name="first_name" placeholder="First Name" required="required">
+          <input type="text" class="form-control fname" id="firstName" [(ngModel)]="add.firstName" name="firstName" placeholder="First Name" required="required">
         </div>
         <div class="col-xs-4">
-          <input type="text" class="form-control " name="last_name" placeholder="Last Name" required="required">
+          <input type="text" class="form-control " id="lastName" [(ngModel)]="add.lastName" name="lastName" placeholder="Last Name" required="required">
         </div>
       </div>
     </div>
     <div class="form-group">
-      <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+      <input type="email" class="form-control"  id="email" [(ngModel)]="add.email" name="email" placeholder="Email" required="required">
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+      <input type="password" class="form-control" id="password" [(ngModel)]="add.password" name="password" placeholder="Password" required="required">
     </div>
     <div class="form-group">
       <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
@@ -29,10 +29,21 @@
       </label>
     </div> -->
     <div class="form-group">
-      <input type="submit" class="btn btn-success btn-lg btn-block" value="Register Now">
+      <input type="submit" (click)="crateUser()" class="btn btn-success btn-lg btn-block" value="Register Now">
+      <button (click)="createUser()">Create Post</button>
     </div>
   </form>
-  <div class="text-center">Already have an account?
-    <a routerLink="login">Sign in</a>
+  <div  >
+      <div>email-id: {{add.email}}</div>
+      <div>username: {{add.firstName}}</div>
+      <div>lastname: {{add.lastName}}</div>
+      {{addId._id}}
+      <div>
+        <button (click)="goBack()">Go Back</button>
+        <button (click)="goLoginPage()">Login</button>
+      </div>
   </div>
+  <!-- <div class="text-center">Already have an account?
+    <a routerLink="login">Sign in</a>
+  </div> -->
 </div>

@@ -30,13 +30,19 @@ export class DataService {
 
    //APIs for form 
    postCreateUser(data) {
-    return this.http.post('localhost:5555/api/v1/users', JSON.stringify(data));
+    console.log("inside postRegistration()", data);
+
+    return this.http.post('http://localhost:5555/api/v1/users', data);
   }
-  putUpdateUser(data) {
-    return this.http.put(`localhost:5555/api/v1/users/${data.id}`, JSON.stringify(data));
+  //login
+  getUser(id){
+    return this.http.get(`http://localhost:5555/api/v1/users/${id}`)
   }
-  delRemoveUser(data) {
-    return this.http.delete(`localhost:5555/api/v1/users/${data.id}`);
-  }
+  // putUpdateUser(data) {
+  //   return this.http.put(`http://localhost:5555/api/v1/users/${data.id}`, JSON.stringify(data));
+  // }
+  // delRemoveUser(data) {
+  //   return this.http.delete(`http://localhost:5555/api/v1/users/${data.id}`);
+  // }
 }
 
